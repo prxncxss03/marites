@@ -10,6 +10,7 @@ captionMsg.forEach(msg => {
             let moreBtn = document.createElement("button");
             msg.append(moreBtn);
             moreBtn.innerText = "more";
+            moreBtn.classList.add("more-btn");
 
             moreBtn.addEventListener('click', ()=> {
 
