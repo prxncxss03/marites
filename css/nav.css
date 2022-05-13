@@ -1,0 +1,39 @@
+
+.navigation-wrapper{
+    height: 60px;
+    border-bottom: var(--border1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 975px;
+    
+}
+.logo {
+   width: 6.1rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-links li {
+    list-style-type: none;
+    margin: 0 0.5rem;
+}
+
+.profile-pic {
+    width: 1.7rem;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}

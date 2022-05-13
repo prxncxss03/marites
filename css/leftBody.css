@@ -1,0 +1,117 @@
+.main-content-wrapper{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 4rem;
+}
+
+/* LEFT BODY STYLES */
+.body-left-side{
+    max-width: 614px;
+}
+/* MY DAY SECTION */
+
+.my-day-container{
+    max-width: 100%;
+    background-color: var(--white);
+    border: var(--border1);
+    padding: 1rem;
+    display: flex;
+
+
+    
+    
+}
+.my-day-person-container{
+    background: linear-gradient(45deg, rgb(255, 230,0), rgb(255,0,128) 80%);
+    border-radius: 50%;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+   
+}
+
+.my-day-person-user{
+    width: 66px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin: 0 1rem;
+
+    
+    
+}
+.my-day-person{
+    width: 3.8rem;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: solid var(--white) 2px;
+}
+
+.my-day-username{
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: .01em;
+    white-space: nowrap;
+    color: var(--text-color1);
+    padding: 0 0.25rem;
+}
+
+/* MAIN POST STYLE */
+
+
+.individual-post{
+    background-color: var(--white);
+    border: var(--border1);
+    margin-top: 1.5rem;
+}
+.title-header-post{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.left-side-title-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.poster-image {
+    width: 2rem;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.main-post-image{
+    object-fit: contain;
+    width: 100%;
+}
+.poster-name {
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.bottom-part{
+    padding: 1rem;
+}
+.bottom-reaction {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-reaction-left svg{
+    margin-right: 0.5rem;
+}
+
+.caption-message{
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden; */
+    
+}
