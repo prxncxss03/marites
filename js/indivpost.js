@@ -1,5 +1,5 @@
 const captionMsg = document.querySelectorAll('.poster-message');
-
+const google_translate_element = document.getElementById('google_translate_element');
 captionMsg.forEach(msg => {       
         let str = msg.textContent;
         if (str.length > 320) {
@@ -8,3 +8,7 @@ captionMsg.forEach(msg => {
         }
 }
 )
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  }
