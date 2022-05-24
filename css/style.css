@@ -1,4 +1,3 @@
-@import url('http://fonts.cdnfonts.com/css/sf-pro-display');
 
 *{
     box-sizing: border-box;
@@ -12,14 +11,13 @@
     --text-color2: #0095F6;
     --text-color3: #8e8e8e;
     --text-color4: #c7c7c7;
-    --text-color2: rgba(142,142,142,142,143),1;
+    /* --text-color2: rgba(142,142,142,142,143),1; */
     --border1: 1px solid  #dbdbdb;
 }
 
 body{
     background-color: var(--bg-color);
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    /* font-family: 'SF Pro Display', sans-serif; */
 }
 
 .main-content-wrapper{
