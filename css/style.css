@@ -9,6 +9,7 @@
     --text-color1: #262626;
     --text-color2: #0095F6;
     --text-color3: #8e8e8e;
+    --text-color4: #c7c7c7;
     --text-color2: rgba(142,142,142,142,143),1;
     --border1: 1px solid  #dbdbdb;
 }
@@ -23,4 +24,7 @@ body{
     flex-direction: row;
     margin-top: 85px;
     margin-left: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
 }

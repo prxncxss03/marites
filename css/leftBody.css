@@ -1,15 +1,17 @@
 
 /* LEFT BODY STYLES */
 .body-left-side{
-    max-width: 614px;
+    max-width: 470px;
+    margin-left: 160px;
 }
+
 /* MY DAY SECTION */
 
 .my-day-container{
     max-width: 100%;
     background-color: var(--white);
     border: var(--border1);
-    border-radius: 0.4rem;
+    border-radius: 8px;
     padding: 1rem;
     display: flex;
 
@@ -63,6 +65,7 @@
     background-color: var(--white);
     border: var(--border1);
     margin-top: 1.5rem;
+    border-radius: 8px;
 }
 .title-header-post{
     display: flex;
