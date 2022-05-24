@@ -1,15 +1,18 @@
 .body-right-side{
-    background-color: antiquewhite;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     width: 20rem;
     order: 2;
+    margin-left: 2.2rem;
+    margin-top: 1rem;
 }
 
 .right-profile-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 0 1rem 0;
 }
 
 .right-right-profile{
@@ -18,7 +21,7 @@
 }
 
 .right-profile-image{
-    width: 3.8rem;
+    width: 3.5rem;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
@@ -32,6 +35,12 @@
 }
 
 /* SUGGESTIONS */
+.suggestions-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .suggestion-person-container{
     display: flex;
     justify-content: space-between;
@@ -46,9 +55,44 @@
     flex-direction: column;
 }
 .suggest-image-follow{
-    width: 2.2rem;
+    width: 2.0rem;
     border-radius: 50%;
     object-fit: cover;
     aspect-ratio: 1/1;
     margin-right: 0.5rem;
 }
+
+.switch-btn, .suggestion-follow{
+    border: none;
+    background: none;
+    color: #0095F6;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.01rem;
+}
+
+.account-name, .suggestion-artist {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 0 0.05rem 0;
+}
+
+
+.account-subtitle{
+    color: var(--text-color3);
+    font-size: 0.875rem;
+}
+
+.suggestions-for-you {
+    color: var(--text-color3);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin: 0 0 0.8rem 0;
+}
+
+.suggested-for-u{
+    color: var(--text-color3);
+    font-size: 0.75rem;
+   
+}
+

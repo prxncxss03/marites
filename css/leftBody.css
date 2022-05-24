@@ -9,6 +9,7 @@
     max-width: 100%;
     background-color: var(--white);
     border: var(--border1);
+    border-radius: 0.4rem;
     padding: 1rem;
     display: flex;
 
