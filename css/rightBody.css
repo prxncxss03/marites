@@ -1,12 +1,12 @@
 .body-right-side{
-    background-color: transparent;
     display: flex;
     flex-direction: column;
     width: 20rem;
-    order: 2;
-    margin-left: 41rem;
     margin-top: 1rem;
+    order: 2;
     position: fixed;
+    margin-left: 53rem;
+   
     
 }
 

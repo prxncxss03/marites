@@ -21,11 +21,10 @@ body{
 }
 
 .main-content-wrapper{
-    display: flex;
-    flex-direction: row;
     margin-top: 85px;
-    margin-left: 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin-left: -25rem;
+    display: flex;
+    justify-content: center;
+    height: 100%;
     
 }
