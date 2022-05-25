@@ -133,3 +133,42 @@
     font-size: 0.875rem;
 }
 
+.comment-left-side-text {
+    display: flex;
+    align-items: center;
+}
+
+.comment-right-side{
+    display: flex;
+    justify-content: flex-start;
+}
+.left-side-comment-wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-top: var(--border1);
+    align-items: center;
+    padding: 0.3rem 0.8rem 0.2rem 0.8rem;
+
+}
+
+.emoji {
+    margin-right: 0.8rem;
+}
+.comment-section{
+    border: none;
+    outline: none;
+    font-family: var(--font-main);
+    font-size: 0.875rem;
+    line-height: 18px;
+    padding: ;
+    
+   
+}
+
+.post-button {
+    color: var(--text-color2);
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
