@@ -53,6 +53,21 @@
 .no-account-wrapper{
     background-color: var(--white);
     border: var(--border1);
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 0.875rem;
+    margin: 1rem 0 0 0;
+}
+
+.no-account-wrapper p {
+    margin: 0 0.2rem 0 0;
+}
+.no-account-wrapper a {
+    font-weight: 600;
+    color: var(--text-color2);
+    text-decoration: none;
 }
 
 .logo2 {
@@ -67,4 +82,16 @@
     border-radius: 0.2rem;
     font-weight: 600;
     font-family: var(--font-main);
+}
+
+.forgot {
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: black;
+}
+
+.login-footer{
+    font-size: 0.75rem;
+    color: var(--text-color4);
+    padding: 2rem 1rem;
 }
