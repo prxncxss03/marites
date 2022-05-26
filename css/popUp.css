@@ -4,10 +4,23 @@
     left: 0;
     right: 0;
     bottom: 0;
+    
     min-height: 100%;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.683);
     z-index: 99;
     display: none;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.pop-up-post{
+    position: fixed;
+    background-color: var(--white);
+}
+
+.pop-up-btn-exit{
+    background: none;
+    border: none;
 }
