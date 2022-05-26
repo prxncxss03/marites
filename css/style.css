@@ -19,6 +19,7 @@
 body{
     background-color: var(--bg-color);
     font-family: var(--font-main);
+    position: relative;
 }
 
 .main-content-wrapper{
