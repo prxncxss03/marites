@@ -3,8 +3,8 @@ const google_translate_element = document.getElementById('google_translate_eleme
 
 captionMsg.forEach(msg => {       
         let str = msg.textContent;
-        if (str.length > 320) {
-            let result = str.slice(0,320);
+        if (str.length > 500) {
+            let result = str.slice(0,400);
             msg.innerHTML = result;
 
             let addEllipsis = document.createTextNode("...");
@@ -22,8 +22,8 @@ captionMsg.forEach(msg => {
             
             
         } 
-        else if (str.length > 500) {
-            let result = str.slice(0,500);
+        else if (str.length > 320) {
+            let result = str.slice(0,220);
             msg.innerHTML = result;
 
             let addEllipsis = document.createTextNode("...");
@@ -41,9 +41,8 @@ captionMsg.forEach(msg => {
             
             
         } 
-}
-)
+    })
 
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-  }
+// function googleTranslateElementInit() {
+//     new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+//   }
