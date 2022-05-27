@@ -1,0 +1,40 @@
+.pop-up-create-post-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.683);
+    z-index: 99;
+    display: none;
+
+   
+
+   
+   
+   
+}
+
+.pop-up-c-exit{
+    background: red;
+    border: none;
+    position: fixed;
+    right: 0;
+    z-index: 99;
+
+}
+
+.pop-up-c-post{
+    background-color: var(--white);
+    border-radius: 1rem;
+    width: 600px;
+    
+    position: fixed;
+}
+
+.create-post-heading{
+    border-bottom: var(--border1);
+    padding: 0.7rem 1rem;
+}

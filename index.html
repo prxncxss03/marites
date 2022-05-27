@@ -8,19 +8,55 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/leftBody.css">
     <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/createPost.css">
     <link rel="stylesheet" href="/css/rightBody.css">
     <link rel="stylesheet" href="/css/popUp.css">
     <title>Marites</title>
 </head>
-<body id="google_translate_element">
-    <div class="pop-up-content-wrapper">
+<body id="google_translate_element body">
+    <div class="pop-up-content-wrapper pop-cover2">
         <div class="pop-up-exit">
             <button class="pop-up-btn-exit">
                 <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-label="Close"  color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 24 24" width="24"><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3px"></polyline><line fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3px" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
             </button>
         </div>
         <div class="pop-up-post">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur porro in ipsum quas, perferendis, optio tempore delectus amet animi culpa sit quis, saepe at eligendi quod. Ullam ipsum quis neque, pariatur repudiandae, earum similique commodi inventore sit amet, iure reprehenderit?.</p>
+            <div class="left-pop-up-post">
+                    <img class="pop-up-image" src="/images/post/duterte.jpeg" alt="">
+            </div>
+            <div class="right-pop-up-post">
+                <div class="pop-top">
+                    <img class="poster-image" src="/images/marlon.jpeg" alt="">
+                    <span class="poster-name">akosimarlon</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- create post modal -->
+    <div class="pop-up-create-post-wrapper pop-cover2">
+        <div class="pop-up-c-exit">
+            <button class="create-pop-up-btn-exit">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-label="Close"  color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 24 24" width="24"><polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3px"></polyline><line fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3px" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line></svg>
+            </button>
+        </div>
+        <div class="pop-up-c-post">
+            <div class="create-post-heading">
+                <p>Create new post</p>
+            </div>
+            <form action="">
+                <div class="form-line">
+                    <label for="title">Title</label>
+                    <input type="text">
+                </div>
+                <div class="form-line">
+                    <label for="text">Text</label>
+                    <input type="text">
+                </div>
+                <div class="form-line">
+                    <label for="image">Image</label>
+                    <input type="file">
+                </div>
+            </form>
         </div>
     </div>
     <!-- NAVIGATION BAR -->
@@ -40,9 +76,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <div class="create-post-btn">
                             <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-label="New Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552z" fill="none" stroke="#262626" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px"></path><line fill="none" stroke="#262626" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line><line fill="none" stroke="#262626" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line></svg>
-                        </a>
+                        </div>
                     </li>
                     <li>
                         <img class="profile-pic" src="/images/marlon.jpeg" alt="">
@@ -375,6 +411,7 @@
     <script src="/js/myday.js"></script>
     <script src="/js/indivpost.js"></script>
     <script src="/js/comment.js"></script>
+    <script src="/js/createpost.js"></script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

@@ -9,13 +9,15 @@
     background-color: rgba(0, 0, 0, 0.683);
     z-index: 99;
     display: none;
+    
+   
    
 }
 
 .pop-up-post{
     position: fixed;
     background-color: var(--white);
-    margin: 1rem 5rem;
+    margin: 1.5rem 5rem;
 }
 
 .pop-up-btn-exit{
@@ -25,4 +27,17 @@
     right: 0;
     z-index: 99;
 
+}
+
+.pop-up-image{
+    width: 450px;
+    aspect-ratio: 1/1;
+}
+
+.pop-up-content-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
