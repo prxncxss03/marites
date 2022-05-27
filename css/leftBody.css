@@ -175,7 +175,6 @@
 }
 
 .title{
-    text-transform: capitalize;
     font-weight: 700;
     background: #009FFF;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
