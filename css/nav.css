@@ -21,6 +21,7 @@
 }
 .logo {
    width: 6.1rem;
+   cursor: pointer;
 }
 
 .nav-links {
@@ -33,6 +34,7 @@
 .nav-links li {
     list-style-type: none;
     margin: 0 0.5rem;
+    cursor: pointer;
 }
 
 .profile-pic {

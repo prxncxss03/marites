@@ -114,6 +114,7 @@
 
 .bottom-reaction-left svg{
     margin-right: 0.5rem;
+    cursor: pointer;
 }
 
 .caption-message{
