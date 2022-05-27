@@ -2,15 +2,23 @@ const commentReax = document.querySelectorAll('.comment-reaction');
 const pop = document.querySelector('.pop-up-content-wrapper');
 const pbutton = document.querySelector('.pop-up-btn-exit');
 const body = document.querySelector(".body");
+const popupImage = document.querySelector(".pop-up-image");
+const origImageSrc = document.querySelectorAll(".main-post-image");
 
 commentReax.forEach(comment => {
+    
     comment.addEventListener("click",
-    ()=> {
+    (e)=> {
         pop.style.display = "flex";
         
-        disableScroll()
         let pbuttonIsClicked = false;
         body.style.overflow = "hidden";
+
+        e.target.style.background = "blue";
+        let origImage = e.target.parentNode.parentNode.parentNode.previousElementSibling.src;
+          
+        popupImage.src = origImage;
+      
 
         pbutton.addEventListener('click', ()=> {
             pbuttonIsClicked = true;
@@ -18,26 +26,9 @@ commentReax.forEach(comment => {
             if (pbuttonIsClicked) {
                 pop.style.display = "none";
                 body.style.overflow = "auto";
-                enableScroll();
+              
             }
         })
-        
 
-
-        
     })
 })
-function disableScroll() {
-    // Get the current page scroll position
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-  
-        // if any scroll is attempted, set this to the previous value
-        window.onscroll = function() {
-            window.scrollTo(scrollLeft, scrollTop);
-        };
-}
-  
-function enableScroll() {
-    window.onscroll = function() {};
-}
