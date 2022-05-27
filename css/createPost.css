@@ -76,6 +76,11 @@
     margin: 0.2rem 0 0 0;
 }
 
+.form-line3 input{
+    font-size: 0.875rem;
+    color: var(--text-color3);
+}
+
 .create-image-post-btn{
     background-color: var(--text-color2);
     font-family: var(--font-main);
