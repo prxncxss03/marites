@@ -30,8 +30,9 @@
     background-color: var(--white);
     border-radius: 1rem;
     width: 600px;
-    left: 25%;
-    top: 15%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     
 
