@@ -7,6 +7,7 @@
 :root{
     --white: #fff;
     --bg-color: #fafafa;
+    --pop-color: rgba(0, 0, 0, 0.856);
     --text-color1: #262626;
     --text-color2: #0095F6;
     --text-color3: #8e8e8e;
