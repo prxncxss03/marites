@@ -13,12 +13,17 @@
 }
 
 .pop-up-c-exit{
-    background: red;
     border: none;
     position: fixed;
     right: 0;
     z-index: 99;
 
+}
+
+.create-pop-up-btn-exit{
+    background: transparent;
+    border: none;
+    margin: 1rem;
 }
 
 .pop-up-c-post{
