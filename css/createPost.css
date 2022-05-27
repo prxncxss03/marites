@@ -33,6 +33,8 @@
     border-bottom: var(--border1);
     padding: 0.7rem 1rem;
     text-align: center;
+    font-weight: 600;
+    color: var(--text-color1);
 }
 
 .create-post-form {
@@ -45,7 +47,7 @@
     margin: 0 0 0.8rem 0;
 }
 
-.form-line input, .form-line textarea{
+.form-line input {
     padding: 0.5rem;
     margin: 0.2rem 0 0 0;
     width: 100%;
@@ -55,6 +57,16 @@
     font-family: var(--font-main);
     font-size: 1rem;
     
+}
+.form-line textarea{
+    width: 100%;
+    border: var(--border1);
+    outline: black;
+    border-radius: 0.2rem;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0.2rem 0 0 0;
 }
 
 .create-image-post-btn{
