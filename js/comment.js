@@ -13,8 +13,6 @@ commentReax.forEach(comment => {
         
         let pbuttonIsClicked = false;
         body.style.overflow = "hidden";
-
-        e.target.style.background = "blue";
         let origImage = e.target.parentNode.parentNode.parentNode.previousElementSibling.src;
           
         popupImage.src = origImage;
