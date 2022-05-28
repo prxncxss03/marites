@@ -14,6 +14,8 @@ commentReax.forEach(comment => {
         let pbuttonIsClicked = false;
         body.style.overflow = "hidden";
         let origImage = e.target.parentNode.parentNode.parentNode.previousElementSibling.src;
+        
+        // alert(posterImage);
           
         popupImage.src = origImage;
       
@@ -29,4 +31,6 @@ commentReax.forEach(comment => {
         })
 
     })
+
+
 })
