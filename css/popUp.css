@@ -1,6 +1,6 @@
 .pop-up-content-wrapper{
-    position: absolute;
-    top: -85px;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -15,17 +15,20 @@
 .pop-up-post{
     position: fixed;
     background-color: var(--white);
-    margin: 1.5rem 5rem;
     display: flex;
     border-radius: 0.25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .pop-up-btn-exit{
-    background: red;
     border: none;
     position: fixed;
     right: 0;
     z-index: 99;
+    background: transparent;
+    margin: 1rem;
 
 }
 
