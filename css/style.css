@@ -39,4 +39,5 @@ button{
 
 textarea{
     resize: none;
+    font-family: var(--font-main);
 }

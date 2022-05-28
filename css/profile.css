@@ -52,4 +52,48 @@
     font-weight: 600;
 }
 
+/* Edit Profile Modal */
+
+.edit-profile-pop-up{
+    background-color: var(--white);
+    position: fixed;
+    border-radius: 0.25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+}
+
+.edit-profile-form {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grp{
+    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grp label {
+    padding-bottom: 0.5rem;
+}
+
+.form-grp:first-child input{
+    color: var(--text-color3);
+}
+
+.form-grp:nth-child(2) textarea{
+    font-size: 0.875rem;
+}
+
+.edit-btn{
+    background-color: var(--text-color2);
+    padding: 0.5rem;
+    font-weight: 600;
+    color: var(--white);
+    border: none;
+    border-radius: 0.2rem;
+}
 
