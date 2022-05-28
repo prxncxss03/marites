@@ -6,6 +6,7 @@ const popupImage = document.querySelector(".pop-up-image");
 const origImageSrc = document.querySelectorAll(".main-post-image");
 const commentPostButton = document.querySelectorAll(".post-button");
 const commentInput = document.querySelectorAll(".comment-section");
+
 commentReax.forEach(comment => {
     
     comment.addEventListener("click",
