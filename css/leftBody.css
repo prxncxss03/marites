@@ -117,13 +117,6 @@
     cursor: pointer;
 }
 
-.caption-message{
-    /* display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden; */
-    
-}
 
 .more-btn{
     background-color: transparent;
@@ -133,10 +126,17 @@
     font-weight: 400;
     font-size: 0.875rem;
 }
-
+.comment-left-side{
+    width: 100%;
+}
 .comment-left-side-text {
     display: flex;
     align-items: center;
+    width: 100%;
+}
+
+.comment-left-side-text form {
+    width: 100%;
 }
 
 .comment-right-side{
@@ -145,9 +145,10 @@
 }
 .left-side-comment-wrapper {
     display: flex;
-    justify-content: space-between;
+   
     border-top: var(--border1);
     align-items: center;
+    width: 100%;
     padding: 0.3rem 0.8rem 0.2rem 0.8rem;
 
 }
@@ -162,10 +163,13 @@
     font-size: 0.875rem;
     line-height: 18px;
     padding: 0.8rem 0.5rem;
+    width: 100%;
+   
  
     
    
 }
+
 
 .post-button {
     color: var(--text-color2);

@@ -100,6 +100,11 @@
     font-size: 0.75rem;
     color: var(--text-color3);
     margin: 0.5rem 0;
+    
+}
+
+.comment-section{
+    width: 100%;
 }
 
 .caption-comment-wrapper{
@@ -120,6 +125,7 @@
     text-transform: uppercase;
     color: var(--text-color3);
 }
+
 
 .lower-comment-likes{
     font-size: 0.875rem;

@@ -4,7 +4,8 @@ const pbutton = document.querySelector('.pop-up-btn-exit');
 const body = document.querySelector(".body");
 const popupImage = document.querySelector(".pop-up-image");
 const origImageSrc = document.querySelectorAll(".main-post-image");
-
+const commentPostButton = document.querySelectorAll(".post-button");
+const commentInput = document.querySelectorAll(".comment-section");
 commentReax.forEach(comment => {
     
     comment.addEventListener("click",
@@ -34,3 +35,4 @@ commentReax.forEach(comment => {
 
 
 })
+
