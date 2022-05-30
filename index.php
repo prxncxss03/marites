@@ -461,6 +461,7 @@
     <script src="./js/indivpost.js"></script>
     <script src="./js/comment.js"></script>
     <script src="./js/createpost.js"></script>
+    <script src="./js/scroll.js"></script>
     <script type="text/javascript" src=".//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 const commentReax = document.querySelectorAll('.comment-reaction');
 const pop = document.querySelector('.pop-up-content-wrapper');
 const pbutton = document.querySelector('.pop-up-btn-exit');
@@ -14,7 +15,7 @@ commentReax.forEach(comment => {
         pop.style.display = "flex";
         
         let pbuttonIsClicked = false;
-        body.style.overflow = "hidden";
+        disableScroll();
         let origImage = e.target.parentNode.parentNode.parentNode.previousElementSibling.src;
         
         // alert(posterImage);
@@ -27,7 +28,7 @@ commentReax.forEach(comment => {
 
             if (pbuttonIsClicked) {
                 pop.style.display = "none";
-                body.style.overflow = "auto";
+                enableScroll()
               
             }
         })
