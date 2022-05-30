@@ -107,3 +107,32 @@
     display: none;
     text-align: center;
 }
+
+/* Login Responsive */
+
+/* Responsive */
+
+@media (min-width: 1440px) { 
+    .login-wrapper {
+        width: 390px;
+    }
+
+
+ }
+
+
+@media (max-width: 376px) { 
+    .login-wrapper {
+        width: 300px;
+    }
+
+
+ }
+
+@media (max-width: 318px) { 
+.login-wrapper {
+    width: 270px;
+}
+
+
+}
