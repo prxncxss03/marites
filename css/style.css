@@ -26,9 +26,11 @@ body{
 .main-content-wrapper{
     margin-top: 85px;
     margin-left: -25rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     height: 100%;
+
     
 }
 
