@@ -114,6 +114,9 @@
     .user-profile-pic {
         margin-right: 0;
     }
+    .username-details {
+        margin: 1rem 0;
+    }
 }
 
 @media (max-width: 607px) { 

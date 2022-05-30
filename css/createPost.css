@@ -92,3 +92,59 @@
     width: 100%;
 
 } 
+
+/* Responsive */
+
+@media (max-width: 607px) { 
+    .pop-up-c-post {
+        width: 530px;  
+    }
+ }
+
+@media (max-width: 535px) { 
+    .pop-up-c-post {
+        width: 530px;  
+    }
+}
+
+@media (max-width: 543px) { 
+    .pop-up-c-post {
+        width: 500px;  
+    }
+}
+
+@media (max-width: 517px) { 
+    .pop-up-c-post {
+        width: 440px;  
+    }
+}
+
+@media (max-width: 431px) { 
+    .pop-up-c-post {
+        width: 420px;  
+    }
+}
+
+@media (max-width: 425px) { 
+    .pop-up-c-post {
+        width: 400px;  
+    }
+}
+
+@media (max-width: 403px) { 
+    .pop-up-c-post {
+        width: 345px;  
+    }
+}
+
+@media (max-width: 361px) { 
+    .pop-up-c-post {
+        width: 320px;  
+    }
+}
+
+@media (max-width: 320px) { 
+    .pop-up-c-post {
+        width: 295px;  
+    }
+}
