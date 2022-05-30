@@ -41,3 +41,22 @@ textarea{
     resize: none;
     font-family: var(--font-main);
 }
+
+/* Responsive */
+
+@media (max-width: 1000px) { 
+    .body-right-content-side{
+        display: none;
+    }
+
+    .main-content-wrapper {
+        margin-left: 0;
+       
+    }
+    
+
+    
+
+
+
+ }
