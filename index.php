@@ -206,7 +206,7 @@
     <script src="./js/post.js"></script>
     <script>
         var start = 0;
-        var limit = 2;
+        var limit = 3;
         var reachedMax = false;
 
         $(window).scroll(function(){ 

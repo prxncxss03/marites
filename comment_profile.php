@@ -1,12 +1,9 @@
 <?php 
     require_once './require/session.php';
     require_once './require/config.php';
-
-    $session_id = $_SESSION["user_id"];
-
     require_once './require/user_data.php';
-
-    $sql = "SELECT post.id, post.user_id, post.title, post.text, post.post_image, post.created_at, user.fullname, user.username, user.image FROM post INNER JOIN user ON post.user_id = user.id WHERE user.id = {$session_id} ORDER BY post.id";
+    $user_id = $_GET["user_id"];
+    $sql = "SELECT post.id, post.user_id, post.title, post.text, post.post_image, post.created_at, user.fullname, user.username, user.image FROM post INNER JOIN user ON post.user_id = user.id WHERE user.id = {$user_id} ORDER BY post.id";
     
     $result = mysqli_query($conn, $sql);
     $rowCount = mysqli_num_rows($result);
@@ -111,13 +108,13 @@
         <div class="main-content-wrapper profile-content-wrapper">
             <div class="profile-content-container">
                 <div class="left-profile">
-                    <img class="user-profile-pic" src="./images/profile/<?php echo $profile_image ?>" alt="" srcset="">
+                    <img class="user-profile-pic" src="./images/profile/<?php echo $profile_user_image ?>" alt="" srcset="">
                     
                 </div>
                 <div class="right-profile">
                     <div class="username-section-wrapper">
-                        <p><?php echo $profile_username ?></p>
-                        <!-- <?php if (isset($_SESSION["user_id"])) {?>
+                        <p><?php echo $profile_user_username ?></p>
+                        <!-- <?php if ($_SESSION["user_id"] == $_SESSION["comment_user_id"]) {?>
                             <button class="edit-profile-btn">Edit Profile</button>
                         <?php } ?> -->
                     </div>
@@ -148,9 +145,7 @@
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/random.js"></script>
-    <script src="./js/myday.js"></script>
     <script src="./js/indivpost.js"></script>
-    <script src="./js/comment.js"></script>
     <script src="./js/createpost.js"></script>
     <script src="./js/editProfile.js"></script>
     <script type="text/javascript" src=".//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

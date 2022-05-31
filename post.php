@@ -62,14 +62,18 @@
             <div class="right-pop-up-post">
                 <div class="pop-upper-part">
                     <div class="pop-top">
-                        <img class="poster-image" src="./images/profile/<?php echo $user_image ?>" alt="">
+                        <a href="./post_profile.php?user_id=<?php echo $user_id ?>">
+                            <img class="poster-image" src="./images/profile/<?php echo $user_image ?>" alt="">
+                        </a>
                         <span class="poster-name"><?php echo $user_username ?></span>
                     </div>
                     <div class="pop-body">
                         <div class="comment-comment-wrapper">
                             <div class="caption-comment-wrapper">
                                 <div class="left-caption-comment">
-                                    <img class="poster-image" src="./images/profile/<?php echo $user_image ?>" alt="">
+                                    <a href="./post_profile.php?user_id=<?php echo $user_id ?>">
+                                        <img class="poster-image" src="./images/profile/<?php echo $user_image ?>" alt="">
+                                    </a>
                                 </div>
                                 <div class="right-caption-comment">
                                     <span class="poster-name">

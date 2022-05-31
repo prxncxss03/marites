@@ -30,7 +30,7 @@ if (isset($_POST["getData"])) {
             $output .= '<div class="individual-post">
                             <div class="title-header-post">
                                 <div class="left-side-title-header">
-                                    <a href="profile.php?user_id='.$user_id.'">
+                                    <a href="post_profile.php?user_id='.$user_id.'">
                                         <img class="poster-image" src="./images/profile/'.$user_image.'" alt="">
                                     </a>
                                     <span class="poster-name">'.$user_username.'</span>
@@ -59,14 +59,15 @@ if (isset($_POST["getData"])) {
                             </div>
                         </div>';
         }
-
-        echo $output;
     }
     else {
     $output = "reachedMax";
     }
 }
 
+echo $output;
 
 
 // Display post --------------------------------
+
+

@@ -7,7 +7,7 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
 
 $post_id = $_SESSION["post_id"];
 
-$sql = "SELECT post_comment.id, post_comment.message, post_comment.created_at, user.username, user.image FROM post_comment INNER JOIN user ON post_comment.user_id = user.id WHERE post_comment.post_id = {$post_id} ORDER BY post_comment.id ASC";
+$sql = "SELECT post_comment.id, post_comment.user_id, post_comment.message, post_comment.created_at, user.username, user.image FROM post_comment INNER JOIN user ON post_comment.user_id = user.id WHERE post_comment.post_id = {$post_id} ORDER BY post_comment.id ASC";
 
 $result = mysqli_query($conn, $sql);
 $rowCount = mysqli_fetch_assoc($result);
@@ -19,10 +19,14 @@ if ($rowCount > 0) {
     $created_at = $row["created_at"];
     $username = $row["username"];
     $image = $row["image"];
+    $user_id = $row["user_id"];
+    $_SESSION["comment_user_id"] = $row["user_id"];
 
     $output .= '<div class="indiv-comment-wrapper">
                   <div class="left-indiv-comment">
-                      <img class="poster-image" src="./images/profile/'.$image.'" alt="">
+                      <a href="./comment_profile.php?user_id='.$user_id.'">
+                        <img class="poster-image" src="./images/profile/'.$image.'" alt="">
+                      </a>
                   </div>
                   <div class="right-indiv-comment">
                       <span class="poster-name">
