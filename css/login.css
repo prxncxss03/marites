@@ -21,6 +21,7 @@
     align-items: center;
     width: 350px;
    
+   
 }
 
 .login{
@@ -121,14 +122,15 @@
  }
 
 
-@media (max-width: 376px) { 
+@media (max-width: 376px) {
+     /*376-> 319px  */
     .login-wrapper {
         width: 300px;
     }
 
 
  }
-
+/* 318px  */
 @media (max-width: 318px) { 
 .login-wrapper {
     width: 270px;
