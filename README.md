@@ -1,4 +1,4 @@
-# Marites
+# Marites 💁
 Marites is an Instagram inspired web application. It was made for our compliance with the final project in Web Application Development 2.
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
