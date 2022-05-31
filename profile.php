@@ -1,3 +1,11 @@
+<?php 
+    require_once './require/session.php';
+    require_once './require/config.php';
+    $user_id = $_SESSION["user_id"];
+
+    require_once './require/user_data.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,33 +81,33 @@
     </div>
     
     <!-- nav -->
-    <?php require_once "./components/nav.php"?>
+    <?php require_once "./require/nav.php"?>
     <!-- nav -->
 
-    <div class="main-content-wrapper profile-content-wrapper">
-        <div class="left-profile">
-            <img class="user-profile-pic" src="./images/marlon.jpeg" alt="" srcset="">
-            
+    <div class="profile-wrapper">
+        <div class="main-content-wrapper profile-content-wrapper">
+            <div class="left-profile">
+                <img class="user-profile-pic" src="./images/profile/<?php echo $profile_image ?>" alt="" srcset="">
+                
+            </div>
+            <div class="right-profile">
+                <div class="username-section-wrapper">
+                    <p><?php echo $profile_username ?></p>
+                    <button class="edit-profile-btn">Edit Profile</button>
+                </div>
+                <div class="username-details">
+                    <span class="number">0</span><span> posts</span>
+                </div>
+                <div class="username-true-name">
+                    <p><?php echo $profile_fullname?></p>
+                </div>
+                <div class="username-bio">
+                    <p>
+                        <?php echo $profile_bio ?>
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="right-profile">
-            <div class="username-section-wrapper">
-                <p>akosimarlon</p>
-                <button class="edit-profile-btn">Edit Profile</button>
-            </div>
-            <div class="username-details">
-                <span class="number">0</span><span> posts</span>
-            </div>
-            <div class="username-true-name">
-                <p>Marlon Adova</p>
-            </div>
-            <div class="username-bio">
-                <p>Magaaral po ako ng mabuti para makatulong sa aking mga magulang.lorem23
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci deleniti nemo facere libero quaerat. Fugiat eum numquam in. Facilis, aut. Repellat, repudiandae sequi!
-                </p>
-            </div>
-        </div>
-        
-        
     </div>
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

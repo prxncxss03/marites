@@ -1,11 +1,18 @@
 
 
+.profile-wrapper {
+    width: 100%;
+}
+
 .profile-content-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5rem auto 0 auto;
-
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 1rem;
+    width: 100%;
+    max-width: 950px;
 }
 
 .right-profile{

@@ -1,39 +1,42 @@
-const commentReax = document.querySelectorAll('.comment-reaction');
-const pop = document.querySelector('.pop-up-content-wrapper');
-const pbutton = document.querySelector('.pop-up-btn-exit');
-const body = document.querySelector(".body");
-const popupImage = document.querySelector(".pop-up-image");
-const origImageSrc = document.querySelectorAll(".main-post-image");
-const commentPostButton = document.querySelectorAll(".post-button");
-const commentInput = document.querySelectorAll(".comment-section");
+const form = document.querySelector('#commentForm');
+const formBtn = document.querySelector('.post-button');
+const commentContainer = document.querySelector('.comment-container');
+const commentInput = document.querySelector('.comment-section');
 
-commentReax.forEach(comment => {
-    
-    comment.addEventListener("click",
-    (e)=> {
-        pop.style.display = "flex";
+form.onsubmit = (e) => {
+  e.preventDefault(); 
+}
+
+formBtn.onclick = () => {
+  // Ajax
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "./php/add_comment.php", true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
         
-        let pbuttonIsClicked = false;
-        body.style.overflow = "hidden";
-        let origImage = e.target.parentNode.parentNode.parentNode.previousElementSibling.src;
-        
-        // alert(posterImage);
-          
-        popupImage.src = origImage;
-      
+        if (data == 'success') {
+          commentInput.value = "";
+        }
+      }
+    }
+  }
+  
+  let formData = new FormData(form);
+  xhr.send(formData);
+}
 
-        pbutton.addEventListener('click', ()=> {
-            pbuttonIsClicked = true;
-
-            if (pbuttonIsClicked) {
-                pop.style.display = "none";
-                body.style.overflow = "auto";
-              
-            }
-        })
-
-    })
-
-
-})
-
+setInterval(() => {
+    let xhr = new XMLHttpRequest(); 
+    xhr.open("GET", "./php/display_comment.php", true);
+    xhr.onload = () => {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          let data = xhr.response;
+          commentContainer.innerHTML = data;
+        }
+      }
+    }
+    xhr.send();
+}, 1000);

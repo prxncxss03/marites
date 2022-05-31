@@ -1,6 +1,6 @@
 <?php
 
-require_once './config.php';
+require_once '../require/config.php';
 
 $credentials = mysqli_real_escape_string($conn, $_POST['credentials']); 
 $password = mysqli_real_escape_string($conn, $_POST["password"]);

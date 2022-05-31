@@ -9,7 +9,10 @@
     background-color: var(--pop-color);
     z-index: 99;
     display: none;
+}
 
+#post-wrapper {
+    display: flex !important;
 }
 
 .pop-up-post{
@@ -48,7 +51,11 @@
 
 .indiv-comment-wrapper{
     display: flex;
+    margin-bottom: 1rem;
+}
 
+.indiv-comment-wrapper:last-child{
+    margin-bottom: 0.5rem;
 }
 
 .right-pop-up-post{
@@ -56,9 +63,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
-    
-
+    position: relative;
 }
 
 .left-pop-up-post{
@@ -75,7 +80,6 @@
     display: flex;
     align-items: center;
     border-bottom: var(--border1);
-
 }
 
 .bottom-reaction-comment{
@@ -88,9 +92,6 @@
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
-    
-    
-
 }
 
 .bottom-reaction2{
@@ -99,7 +100,8 @@
 .comment-details p{
     font-size: 0.75rem;
     color: var(--text-color3);
-    margin: 0.5rem 0;
+    padding: 0.4rem 0;
+    
     
 }
 
@@ -107,13 +109,16 @@
     width: 100%;
 }
 
+.comment-comment-wrapper {
+    max-height: 427px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .caption-comment-wrapper{
     display: flex;
     margin: 1rem 0;
-}
-
-.indiv-comment-wrapper{
-    
+    margin-bottom: 1.5rem;
 }
 
 .lower-comment-details{
@@ -121,7 +126,7 @@
 }
 
 .lower-comment-time{
-    font-size: 0.6rem;
+    font-size: 10px;
     text-transform: uppercase;
     color: var(--text-color3);
 }
@@ -131,6 +136,66 @@
     font-size: 0.875rem;
     font-weight: 600;
     margin: 0 0 0.5rem 0;
-    
-   
+}
+
+/* Loading */
+  
+.comment-loading {
+    position: fixed;
+    height: 13.7vh;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    right: 0;
+    top: 65px;
+    width: 500px;
+    padding: 213px;
+    display: flex;
+}
+  
+#loading i {
+    font-size: 2.5rem;
+    color: #1d1d1f;
+}
+
+.loading {
+    padding: 10rem 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.spinner {
+    color: rgb(229, 231, 235);
+    height: 40px;
+    width: 40px;
+    fill: #777;
+}
+  
+.animation-spin {
+    -webkit-animation: spin 1200ms infinite linear;
+    animation: spin 1200ms infinite linear;
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+.add-more-comment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.add-more-comment-btn {
+    background-color: transparent;
+    border: none;
 }

@@ -20,12 +20,13 @@
                 <!-- <div class="register-desc"> 
                     <p>Sign up to see photos and videos from your friends.</p>
                 </div> -->
-                <form class="login-input-wrapper signup" action="#">
+                <form class="login-input-wrapper signup" action="#" enctype="multipart/form-data">
                     <div class="error"></div>
                     <input type="text" placeholder="Mobile Number or Email" name="mobile-email">
                     <input type="text" placeholder="Full Name" name="name">
                     <input type="text" placeholder="Username" name="username">
                     <input type="password" placeholder="Password" name="password">
+                    <input type="file" name="image">
                     <div class="conditions">
                         By signing up, you agree to our <a href="https://help.instagram.com/581066165581870" target="_blank" rel="noopener noreferrer">Terms</a> , <a href="https://help.instagram.com/519522125107875/?maybe_redirect_pol=0" target="_blank" rel="noopener noreferrer">Data Policy</a> and <a href="https://help.instagram.com/1896641480634370?ref=ig" target="_blank" rel="noopener noreferrer">Cookies Policy </a>
                     </div>

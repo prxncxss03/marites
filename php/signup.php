@@ -1,5 +1,5 @@
 <?php
-require_once './config.php';
+require_once '../require/config.php';
 
 $name = mysqli_real_escape_string($conn, $_POST["name"]);
 $username = mysqli_real_escape_string($conn, $_POST["username"]);
@@ -33,9 +33,32 @@ else {
         echo "Sorry your mobile number is already taken. Please try a different mobile number";
       }
       else {
-        $sql = "INSERT INTO user(fullname, mobile, username, password) VALUES('{$name}', '{$mobile_email}', '{$username}', '{$password}')";
-        $result = mysqli_query($conn, $sql);
-        echo "success";
+        if (isset($_FILES["image"])) {
+          $img_name = $_FILES["image"]["name"]; 
+          $img_type = $_FILES["image"]["type"]; 
+          $tmp_name = $_FILES["image"]["tmp_name"]; 
+
+          $img_explode = explode(".", $img_name);
+          $img_ext = end($img_explode);
+          $extentions = ["png", "jpeg", "jpg"];
+
+          if (in_array($img_ext, $extentions) === true) { 
+            $time = time(); 
+            $new_img_name = $time.$img_name;
+
+            if (move_uploaded_file($tmp_name, "../images/profile/" . $new_img_name)) {
+              $sql = "INSERT INTO user(fullname, mobile, username, password, image) VALUES('{$name}', '{$mobile_email}', '{$username}', '{$password}', '{$new_img_name}')";
+              $result = mysqli_query($conn, $sql);
+              echo "success";
+            }
+          }
+          else {
+            echo "Only (JPG, JPEG, PNG) files are allowed";
+          }
+        }
+        else {
+          echo "Please add your profile picture";
+        }
       }
     }
     else if (filter_var($mobile_email, FILTER_VALIDATE_EMAIL)) { // If mobile_email is email
@@ -47,10 +70,29 @@ else {
         echo "Sorry your email is already taken. Please try a different email";
       }
       else {
-        $sql = "INSERT INTO user(fullname, email, username, password) VALUES('{$name}', '{$mobile_email}', '{$username}', '{$password}')";
-        $result = mysqli_query($conn, $sql);
-        echo "success";
+        $img_name = $_FILES["image"]["name"]; 
+        $img_type = $_FILES["image"]["type"]; 
+        $tmp_name = $_FILES["image"]["tmp_name"]; 
+
+        $img_explode = explode(".", $img_name);
+        $img_ext = end($img_explode);
+        $extentions = ["png", "jpeg", "jpg"];
+
+        if (in_array($img_ext, $extentions) === true) { 
+          $time = time(); 
+          $new_img_name = $time.$img_name;
+
+          if (move_uploaded_file($tmp_name, "../images/profile/" . $new_img_name)) {
+            $sql = "INSERT INTO user(fullname, email, username, password, image) VALUES('{$name}', '{$mobile_email}', '{$username}', '{$password}', '{$new_img_name}')";
+            $result = mysqli_query($conn, $sql);
+            echo "success";
+          }
+        }
+        else {
+          echo "Only (JPG, JPEG, PNG) files are allowed";
+        }
       }
     }
   }
 }
+
