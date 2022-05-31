@@ -18,6 +18,7 @@ else {
   else {
     $sql = "SELECT * FROM user WHERE username = '{$credentials}' AND password = '{$password}'";
   }
+
   $result = mysqli_query($conn, $sql);
   $row_count = mysqli_num_rows($result);
 

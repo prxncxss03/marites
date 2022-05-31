@@ -1,6 +1,7 @@
 <?php 
+
   // Get user info
-  $sql2 = "SELECT * FROM user WHERE id = {$user_id}";
+  $sql2 = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
   $result2 = mysqli_query($conn, $sql2);
   $rowCount2 = mysqli_num_rows($result2);
 

@@ -30,7 +30,9 @@ if (isset($_POST["getData"])) {
             $output .= '<div class="individual-post">
                             <div class="title-header-post">
                                 <div class="left-side-title-header">
-                                    <img class="poster-image" src="./images/profile/'.$user_image.'" alt="">
+                                    <a href="profile.php?user_id='.$user_id.'">
+                                        <img class="poster-image" src="./images/profile/'.$user_image.'" alt="">
+                                    </a>
                                     <span class="poster-name">'.$user_username.'</span>
                                 </div>
                                 <div class="right-side-title-header">

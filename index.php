@@ -63,7 +63,9 @@
             <div class="body-right-content-side">
                 <div class="right-profile-wrapper">
                     <div class="right-right-profile">
-                        <img class="right-profile-image" src="./images/profile/<?php echo $profile_image ?>" alt="">
+                        <a href="./profile.php?user_id=<?php echo $user_id ?>">
+                            <img class="right-profile-image" src="./images/profile/<?php echo $profile_image ?>" alt="">
+                        </a>
                         <div class="right-profile-username-wrapper">
                             <span class="account-name"><?php echo $profile_username ?></span>
                             <span class="account-subtitle"><?php echo $profile_fullname?></span>

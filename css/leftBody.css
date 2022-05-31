@@ -2,7 +2,6 @@
 /* LEFT BODY STYLES */
 .body-left-side{
     max-width: 470px;
-
   
 }
 
@@ -96,7 +95,8 @@
     font-weight: 400;
     font-size: 0.875rem;
     color: var(--text-color1);
-
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .main-post-image{

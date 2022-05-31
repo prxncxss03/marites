@@ -1,4 +1,5 @@
 <?php
+
 require_once '../require/config.php';
 
 $name = mysqli_real_escape_string($conn, $_POST["name"]);

@@ -1,9 +1,32 @@
 <?php 
     require_once './require/session.php';
     require_once './require/config.php';
-    $user_id = $_SESSION["user_id"];
+
+    $session_id = $_SESSION["user_id"];
+    $user_id = $_GET["user_id"];
 
     require_once './require/user_data.php';
+
+    $sql = "SELECT post.id, post.user_id, post.title, post.text, post.post_image, post.created_at, user.fullname, user.username, user.image FROM post INNER JOIN user ON post.user_id = user.id WHERE post.user_id = {$user_id} ORDER BY post.id DESC";
+    $result = mysqli_query($conn, $sql);
+    $rowCount = mysqli_num_rows($result);
+    $output = "";
+    $count = 0;
+    
+
+    if ($rowCount > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $count += 1;
+            $post_id = $row["id"];
+            $profile_user_image = $row["image"];
+            $profile_user_username = $row["username"];
+            $profile_user_fullname = $row["fullname"];
+            $post_image = $row["post_image"];
+            $output .= '<a href="post.php?post_id=' . $post_id . '" class="profile-post">
+                            <img src="./images/post/'.$post_image.'" alt="">
+                       </a>';
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -86,26 +109,37 @@
 
     <div class="profile-wrapper">
         <div class="main-content-wrapper profile-content-wrapper">
-            <div class="left-profile">
-                <img class="user-profile-pic" src="./images/profile/<?php echo $profile_image ?>" alt="" srcset="">
-                
+            <div class="profile-content-container">
+                <div class="left-profile">
+                    <img class="user-profile-pic" src="./images/profile/<?php echo $profile_user_image ?>" alt="" srcset="">
+                    
+                </div>
+                <div class="right-profile">
+                    <div class="username-section-wrapper">
+                        <p><?php echo $profile_user_username ?></p>
+                        <button class="edit-profile-btn">Edit Profile</button>
+                    </div>
+                    <div class="username-details">
+                        <span class="number"><?php echo $count ?></span><span> posts</span>
+                    </div>
+                    <div class="username-true-name">
+                        <p><?php echo $profile_user_fullname ?></p>
+                    </div>
+                    <div class="username-bio">
+                        <p>
+                            <?php echo $profile_bio ?>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="right-profile">
-                <div class="username-section-wrapper">
-                    <p><?php echo $profile_username ?></p>
-                    <button class="edit-profile-btn">Edit Profile</button>
-                </div>
-                <div class="username-details">
-                    <span class="number">0</span><span> posts</span>
-                </div>
-                <div class="username-true-name">
-                    <p><?php echo $profile_fullname?></p>
-                </div>
-                <div class="username-bio">
-                    <p>
-                        <?php echo $profile_bio ?>
-                    </p>
-                </div>
+            <div class="profile-post-container">
+                <!-- <a href="#" class="profile-post">
+                    <img src="./images/post/1653908401192257011_1464126747260302_4785008348765763254_n.jpg" alt="">
+                    <div class="profile-post-banner">
+                        <svg id="comment-svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-label="Comment" color="#fff" fill="#fff" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2px"></path></svg>   
+                    </div>
+                </a> -->
+                <?php echo $output ?>
             </div>
         </div>
     </div>
