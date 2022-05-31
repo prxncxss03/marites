@@ -13,7 +13,7 @@ commentReax.forEach(comment => {
     comment.addEventListener("click",
     (e)=> {
         pop.style.display = "flex";
-        
+        disableScroll()
         let pbuttonIsClicked = false;
    
         let origImage = e.target.parentNode.parentNode.parentNode.previousElementSibling.src;
