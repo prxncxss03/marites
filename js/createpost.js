@@ -8,7 +8,7 @@ const svgCreate = document.querySelector(".create-post-svg");
 
 createPost.addEventListener('click', ()=> {
     createPostPop.style.display = "flex";
-    body2.style.overflow = "hidden";
+  
     svgCreate.style.fill = "black";
     homeBtn.style.fill = "none";
     stroke.forEach(st => {
@@ -18,7 +18,7 @@ createPost.addEventListener('click', ()=> {
 
     createExit.addEventListener('click', ()=> {
         createPostPop.style.display = "none";
-        body2.style.overflow = "auto";
+       
         svgCreate.style.fill = "none";
         homeBtn.style.fill = "black";
         stroke.forEach(st => {
@@ -26,3 +26,18 @@ createPost.addEventListener('click', ()=> {
         })
     })
 })
+
+function disableScroll() {
+	// Get the current page scroll position
+	scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+
+		// if any scroll is attempted, set this to the previous value
+		window.onscroll = function() {
+			window.scrollTo(scrollLeft, scrollTop);
+		};
+}
+
+function enableScroll() {
+	window.onscroll = function() {};
+}

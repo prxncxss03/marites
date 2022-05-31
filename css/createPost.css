@@ -93,6 +93,7 @@
     width: 100%;
 } 
 
+<<<<<<< HEAD
 .error {
     color: #721c24;
     background-color: #f8d7da;
@@ -104,4 +105,69 @@
     border-radius: 0.25rem;
     display: none;
     text-align: center;
+=======
+} 
+
+/* Responsive */
+
+@media (max-width: 607px) { 
+    .pop-up-c-post {
+        width: 530px;  
+    }
+ }
+
+@media (max-width: 535px) { 
+    .pop-up-c-post {
+        width: 530px;  
+    }
+}
+
+@media (max-width: 543px) { 
+    .pop-up-c-post {
+        width: 500px;  
+    }
+}
+
+@media (max-width: 517px) { 
+    .pop-up-c-post {
+        width: 440px;  
+    }
+}
+
+@media (max-width: 547px) { 
+    .pop-up-c-post {
+        width: 430px;  
+    }
+}
+
+
+@media (max-width: 431px) { 
+    .pop-up-c-post {
+        width: 420px;  
+    }
+}
+
+@media (max-width: 425px) { 
+    .pop-up-c-post {
+        width: 400px;  
+    }
+}
+
+@media (max-width: 405px) { 
+    .pop-up-c-post {
+        width: 345px;  
+    }
+}
+
+@media (max-width: 361px) { 
+    .pop-up-c-post {
+        width: 320px;  
+    }
+}
+
+@media (max-width: 323px) { 
+    .pop-up-c-post {
+        width: 295px;  
+    }
+>>>>>>> d007185e3f1006cc0cf848f11be2818d5bfc19ad
 }

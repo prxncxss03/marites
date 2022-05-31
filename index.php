@@ -20,6 +20,11 @@
     <link rel="stylesheet" href="./css/createPost.css">
     <link rel="stylesheet" href="./css/rightBody.css">
     <link rel="stylesheet" href="./css/popUp.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+/>
     <title>Marites</title>
 </head>
 <body id="google_translate_element" class="body">
@@ -148,55 +153,62 @@
         
         </div>
         <div class="body-left-side">
-            <div class="my-day-container">
-                <!-- each person -->
-                <div class="my-day-person-user">
+            <div class="my-day-container swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- each person -->
+                    <div class="my-day-person-user swiper-slide">
+                        <div class="my-day-person-container">
+                    
+                            <img class="my-day-person avatar1" src="" alt="">
+                        </div>
+                        <span class="my-day-username1 my-day-username"></span>
+                    </div>
+                    <!--  -->
+                    <div class="my-day-person-user swiper-slide">
+                        <div class="my-day-person-container">
+                            <img class="my-day-person avatar2" src="" alt="">
+                        </div>
+                        <span class="my-day-username my-day-username2">iamomar</span>
+                    </div>
+                    <div class="my-day-person-user swiper-slide">
+                        <div class="my-day-person-container">
+                    
+                            <img class="my-day-person avatar3" src="" alt="">
+                        </div>
+                        <span class=" my-day-username">cathy</span>
+                    </div>
+                    <div class="my-day-person-user swiper-slide">
+                        <div class="my-day-person-container">
+                    
+                            <img class="my-day-person avatar4" src="" alt="">
+                        </div>
+                        <span class=" my-day-username">prince</span>
+                    </div>
+                    <div class="my-day-person-user swiper-slide">
+                        <div class="my-day-person-container">
+                    
+                            <img class="my-day-person avatar5" src="" alt="">
+                        </div>
+                        <span class=" my-day-username">gdwnlyn</span>
+                    </div>
+                    <div class="my-day-person-user swiper-slide">
+                        <div class="my-day-person-container">
+                    
+                            <img class="my-day-person avatar6" src="" alt="">
+                        </div>
+                        <span class=" my-day-username">christine</span>
+                    </div>
+                    <div class="my-day-person-user swiper-slide">
                     <div class="my-day-person-container">
                         
-                        <img class="my-day-person avatar1" src="" alt="">
+                        <img class="my-day-person avatar7" src="" alt="">
                     </div>
-                    <span class="my-day-username1 my-day-username"></span>
+                    <span class=" my-day-username">klt.srrn</span>
                 </div>
-                <!--  -->
-                <div class="my-day-person-user">
-                    <div class="my-day-person-container">
-                        <img class="my-day-person avatar2" src="" alt="">
-                    </div>
-                    <span class="my-day-username my-day-username2">iamomar</span>
                 </div>
-                <div class="my-day-person-user">
-                    <div class="my-day-person-container">
-                        
-                        <img class="my-day-person avatar3" src="" alt="">
-                    </div>
-                    <span class=" my-day-username">cathy</span>
-                </div>
-                <div class="my-day-person-user">
-                    <div class="my-day-person-container">
-                        
-                        <img class="my-day-person avatar4" src="" alt="">
-                    </div>
-                    <span class=" my-day-username">prince</span>
-                </div>
-
-                <div class="my-day-person-user">
-                    <div class="my-day-person-container">
-                        
-                        <img class="my-day-person avatar5" src="" alt="">
-                    </div>
-                    <span class=" my-day-username">gdwnlyn</span>
-                </div>
-
-                <div class="my-day-person-user">
-                    <div class="my-day-person-container">
-                        
-                        <img class="my-day-person avatar6" src="" alt="">
-                    </div>
-                    <span class=" my-day-username">christine</span>
-                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-
-
             <div class="left-body-post"></div>
         </div>
 
@@ -246,7 +258,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/random.js"></script>
     <script src="./js/myday.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/myday.js"></script>
     <script src="./js/indivpost.js"></script>
     <script src="./js/createpost.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script type="text/javascript" src=".//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

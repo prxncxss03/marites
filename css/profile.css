@@ -113,6 +113,7 @@
     border-radius: 0.2rem;
 }
 
+<<<<<<< HEAD
 .profile-post-container {
     padding-top: 1.5rem;
     display: flex;
@@ -152,3 +153,91 @@
     top: 0;
     z-index: 4000;
 } */
+=======
+/* Responsive */
+
+
+@media (max-width: 811px) { 
+    .profile-content-wrapper {
+        flex-direction: column;
+    }
+
+    .username-section-wrapper {
+        justify-content: center;
+    }
+    .username-details {
+        text-align: center;
+    }
+    .user-profile-pic {
+        margin-right: 0;
+    }
+    .username-details {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 607px) { 
+    .right-profile {
+        width: 550px;
+    }
+
+}
+
+
+@media (max-width: 559px) { 
+    .right-profile {
+        width: 520px;
+    }
+
+}
+
+@media (max-width: 527px) { 
+    .right-profile {
+        width: 455px;
+    }
+
+}
+
+@media (max-width: 461px) { 
+    .right-profile {
+        width: 430px;
+    }
+
+}
+
+@media (max-width: 435px) { 
+    .right-profile {
+        width: 410px;
+    }
+
+}
+
+@media (max-width: 419px) { 
+    .right-profile {
+        width: 355px;
+    }
+
+}
+
+@media (max-width: 365px) { 
+    .right-profile {
+        width: 330px;
+    }
+    .user-profile-pic {
+        width: 8rem;
+    }
+    .username-section-wrapper p {
+        font-size: 1.5rem;
+    }
+    .username-details {
+        margin: 0.8rem 0;
+    }
+}
+
+@media (max-width: 329px) { 
+    .right-profile {
+        width: 300px;
+    }
+
+}
+>>>>>>> d007185e3f1006cc0cf848f11be2818d5bfc19ad

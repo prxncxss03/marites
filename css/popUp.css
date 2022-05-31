@@ -23,6 +23,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
 
 .pop-up-btn-exit{
@@ -136,6 +137,7 @@
     font-size: 0.875rem;
     font-weight: 600;
     margin: 0 0 0.5rem 0;
+<<<<<<< HEAD
 }
 
 /* Loading */
@@ -199,3 +201,135 @@
     background-color: transparent;
     border: none;
 }
+=======
+    
+   
+}
+
+/* Responsive */
+
+@media (max-width: 1175px) { 
+    .left-pop-up-post {
+        width: 630px;
+    }
+    .right-pop-up-post {
+        width: 480px;
+    }
+
+}
+
+@media (max-width: 1131px) { 
+    .left-pop-up-post {
+        width: 610px;
+    }
+    .right-pop-up-post {
+        width: 460px;
+    }
+
+}
+
+@media (max-width: 1097px) { 
+    .left-pop-up-post {
+        width: 590px;
+    }
+    .right-pop-up-post {
+        width: 440px;
+    }
+
+}
+
+@media (max-width: 1059px) { 
+    .left-pop-up-post {
+        width: 560px;
+    }
+    .right-pop-up-post {
+        width: 410px;
+    }
+
+}
+
+@media (max-width: 995px) { 
+    .left-pop-up-post {
+        width: 530px;
+    }
+    .right-pop-up-post {
+        width: 380px;
+    }
+
+}
+
+@media (max-width: 941px) { 
+    .left-pop-up-post {
+        width: 500px;
+    }
+    .right-pop-up-post {
+        width: 350px;
+    }
+
+}
+
+
+
+@media (max-width: 877px) { 
+    .pop-up-post {
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+    .right-pop-up-post {
+        width: 500px;
+    }
+
+}
+
+@media (max-width: 538px) { 
+    .left-pop-up-post,.right-pop-up-post  {
+        width: 450px;
+    }
+}
+
+@media (max-width: 486px) { 
+    .left-pop-up-post,.right-pop-up-post  {
+        width: 430px;
+    }
+}
+
+@media (max-width: 454px) { 
+    .left-pop-up-post,.right-pop-up-post  {
+        width: 410px;
+    }
+}
+
+@media (max-width: 428px) { 
+    .left-pop-up-post,.right-pop-up-post  {
+        width: 390px;
+    }
+}
+@media (max-width: 406px) { 
+    .left-pop-up-post,.right-pop-up-post  {
+        width: 370px;
+    }
+}
+
+@media (max-width: 384px) { 
+    .left-pop-up-post,.right-pop-up-post  {
+        width: 350px;
+    }
+}
+
+@media (max-width: 364px) { 
+    .left-pop-up-post,.right-pop-up-post  {
+        width: 310px;
+    }
+}
+
+@media (max-width: 326px) { 
+    .left-pop-up-post,.right-pop-up-post  {
+        width: 290px;
+    }
+}
+
+
+
+
+
+>>>>>>> d007185e3f1006cc0cf848f11be2818d5bfc19ad
