@@ -203,6 +203,7 @@
 @media (max-width: 877px) { 
     .pop-up-post {
         flex-direction: column;
+        overflow-y: scroll;
     }
     .right-pop-up-post {
         width: 500px;

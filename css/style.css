@@ -44,6 +44,24 @@ textarea{
     font-family: var(--font-main);
 }
 
+.swiper-button-next::after, .swiper-button-prev::after {
+	font-size: 0.6rem !important;
+	background: rgba(255, 255, 255, 0.76);
+	padding: 0.4rem 0.5rem !important;
+	border-radius: 3rem !important;
+	color: black !important;
+	font-weight: 800 !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+}
+
+.swiper-slide{
+    margin: 0 !important;
+}
+
+.swiper{
+    padding: 0.8rem  !important;
+}
+
 /* Responsive */
 
 @media (max-width: 1000px) { 

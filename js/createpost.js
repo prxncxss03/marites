@@ -8,7 +8,7 @@ const svgCreate = document.querySelector(".create-post-svg");
 
 createPost.addEventListener('click', ()=> {
     createPostPop.style.display = "flex";
-    disableScroll();
+  
     svgCreate.style.fill = "black";
     homeBtn.style.fill = "none";
     stroke.forEach(st => {
@@ -18,8 +18,7 @@ createPost.addEventListener('click', ()=> {
 
     createExit.addEventListener('click', ()=> {
         createPostPop.style.display = "none";
-        body2.style.overflow = "auto";
-        enableScroll();
+       
         svgCreate.style.fill = "none";
         homeBtn.style.fill = "black";
         stroke.forEach(st => {

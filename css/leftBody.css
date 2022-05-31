@@ -38,9 +38,11 @@
     text-overflow: ellipsis;
     text-align: center;
     margin: 0 0.25rem;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: center ;
 
-    
-    
 }
 .my-day-person{
     width: 3.8rem;
