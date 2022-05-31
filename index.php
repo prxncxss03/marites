@@ -5,6 +5,26 @@
 
     require_once './require/user_data.php';
     ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+
+    $sql = "SELECT * FROM user WHERE id != {$_SESSION["user_id"]} LIMIT 0, 7";
+    $result = mysqli_query($conn, $sql);
+    $rowCount = mysqli_num_rows($result);
+    $output = '';
+
+    if ($rowCount > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $output .= '<div class="suggestion-person-container">
+                            <div class="suggestions-person-right">
+                                <img class="suggest-image-follow" src="./images/profile/'.$row["image"].'" alt="">
+                                <div class="suggestion-username-wrapper">
+                                    <span class="suggestion-artist">'.$row["username"].'</span>
+                                    <span class="suggested-for-u">Suggested for you</span>
+                                </div>
+                            </div>
+                            <button class="suggestion-follow">Follow</button>
+                        </div>';
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -80,71 +100,7 @@
                 </div>
                 <div class="suggestions-wrapper">
                     <span class="suggestions-for-you">Suggestions For You</span>
-                    <div class="suggestion-person-container">
-                        <div class="suggestions-person-right">
-                            <img class="suggest-image-follow" src="./images/suggestion/clara.jpeg" alt="">
-                            <div class="suggestion-username-wrapper">
-                                <span class="suggestion-artist">clara_benin</span>
-                                <span class="suggested-for-u">Suggested for you</span>
-                            </div>
-                        </div>
-                        <button class="suggestion-follow">Follow</button>
-                    </div>
-
-                    <div class="suggestion-person-container">
-                        <div class="suggestions-person-right">
-                            <img class="suggest-image-follow" src="./images/suggestion/billie.jpeg" alt="">
-                            <div class="suggestion-username-wrapper">
-                                <span class="suggestion-artist">billieeillish</span>
-                                <span class="suggested-for-u">Suggested for you</span>
-                            </div>
-                        </div>
-                        <button class="suggestion-follow">Follow</button>
-                    </div>
-
-                    <div class="suggestion-person-container">
-                        <div class="suggestions-person-right">
-                            <img class="suggest-image-follow" src="./images/suggestion/ez.jpeg" alt="">
-                            <div class="suggestion-username-wrapper">
-                                <span class="suggestion-artist">ezmiller</span>
-                                <span class="suggested-for-u">Suggested for you</span>
-                            </div>
-                        </div>
-                        <button class="suggestion-follow">Follow</button>
-                    </div>
-
-                    <div class="suggestion-person-container">
-                        <div class="suggestions-person-right">
-                            <img class="suggest-image-follow" src="./images/suggestion/renee.jpeg" alt="">
-                            <div class="suggestion-username-wrapper">
-                                <span class="suggestion-artist">iamrenee</span>
-                                <span class="suggested-for-u">Suggested for you</span>
-                            </div>
-                        </div>
-                        <button class="suggestion-follow">Follow</button>
-                    </div>
-
-                    <div class="suggestion-person-container">
-                        <div class="suggestions-person-right">
-                            <img class="suggest-image-follow" src="./images/suggestion/peniel.jpeg" alt="">
-                            <div class="suggestion-username-wrapper">
-                                <span class="suggestion-artist">penpen</span>
-                                <span class="suggested-for-u">Suggested for you</span>
-                            </div>
-                        </div>
-                        <button class="suggestion-follow">Follow</button>
-                    </div>
-
-                    <div class="suggestion-person-container">
-                        <div class="suggestions-person-right">
-                            <img class="suggest-image-follow" src="./images/suggestion/paolo.webp" alt="">
-                            <div class="suggestion-username-wrapper">
-                                <span class="suggestion-artist">paolo guico</span>
-                                <span class="suggested-for-u">Suggested for you</span>
-                            </div>
-                        </div>
-                        <button class="suggestion-follow">Follow</button>
-                    </div>
+                    <?php echo $output ?>
                 </div>
                 <div class="right-side-footer">
                     <p>© 2022 MARITES FROM ANO LATEST</p>
