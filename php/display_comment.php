@@ -10,7 +10,7 @@ $post_id = $_SESSION["post_id"];
 $sql = "SELECT post_comment.id, post_comment.user_id, post_comment.message, post_comment.created_at, user.username, user.image FROM post_comment INNER JOIN user ON post_comment.user_id = user.id WHERE post_comment.post_id = {$post_id}";
 
 $result = mysqli_query($conn, $sql);
-$rowCount = mysqli_fetch_assoc($result);
+$rowCount = mysqli_num_rows($result);
 $output = "";
 
 if ($rowCount > 0) {
